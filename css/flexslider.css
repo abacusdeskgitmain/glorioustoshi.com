@@ -1,0 +1,93 @@
+#container {margin: 0 auto;width: 940px; position:relative;}
+.flexslider .slides > li {display: none; list-style:none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flex-pauseplay span {text-transform: capitalize;}
+/* Clearfix for the .slides element */
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .slides {display: block;} 
+* html .slides {height: 1%;}
+body{ margin:0;}
+ul,li,ol
+{
+	margin:0;
+	padding:0;
+	}
+.flexslider {
+	width: 100%;
+	margin: 0;
+	position: relative;
+}
+.flexslider .slides img {
+	max-width: 100%;
+	display: block;
+}
+
+.flexslider:after {
+	display:block;
+	content:'';
+	width:940px;
+	height:70px;
+	position:absolute;
+	left:0;
+	bottom:-70px;
+	background: url('../images/slider_bg.png') no-repeat;
+}
+	
+/* Control Nav */
+.flex-direction-nav{
+	display:none;
+}
+
+.flex-control-nav {
+	position:absolute;
+	left:110px;
+	bottom:60px;
+	list-style:none;
+	padding: 2px 14px 3px 14px;
+	
+	cursor:pointer;
+}
+.flex-control-nav li {
+	float:left;
+	margin-right:4px;
+	list-style:none;
+}
+.flex-control-nav li a {
+	display:block;
+	text-indent:-999em;
+	width:12px;
+	height:12px;
+	background: url('../images/buttons.png') no-repeat -13px 0;
+}
+	.flex-control-nav li a:hover, .flex-control-nav li a.active {
+		background-position:0 0;
+	}
+	
+@media only screen and (min-width: 768px) and (max-width: 995px) {
+	.flexslider:after {
+		width:768px;
+		height:51px;
+		bottom:-51px;
+		background: url('../images/slider_bg_2.png') no-repeat;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.flex-caption, .flex-control-nav {display:none;}
+	.flexslider:after {
+		width:300px;
+		height:20px;
+		bottom:-20px;
+		background: url('../images/slider_bg_4.png') no-repeat;
+	}
+	.flex-control-nav {
+		left:12px;
+		bottom:8px;
+	}
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.flexslider:after {
+		width:420px;
+		height:28px;
+		bottom:-28px;
+		background: url('../images/slider_bg_3.png') no-repeat;
+	}
+}
